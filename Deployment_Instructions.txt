@@ -1,0 +1,9 @@
+1. Create a Cloud Function with the configuration mentioned in screenshot under folder GCP_Cloud_Function.
+2. Use python function clockangle from main.py as a source in cloud function
+3. Trigger this cloud function from CLI using gcloud utility or cURL command. (Refer screenshots)
+4. Once this function is live, it's HTTP Trigger URL can be useed to execute this function from any interface with input time, which will get angle in return
+
+Example trigger commands:
+gcloud functions call cloud-angle --data '{"input_time":"12:45"}'
+
+curl -X POST "https://us-central1-krishrika.cloudfunctions.net/cloud-angle" -H "Content-Type:application/json" --data '{"input_time":"11:40"}'
